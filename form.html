@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+
+    <form name="myform" method="post">
+        <table border="1px">
+            <tr>
+                <td>
+                    <label for="nm">Name: </label>
+                </td>
+                <td>
+                    <input type="text" name="nm" id="nm" placeholder="Enter Your Name" title="Enter Your Name">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="em">Email: </label>
+                </td>
+                <td>
+                    <input type="email" name="em" id="em" placeholder="Enter Your Email Address"
+                        title="Don't Forget Your Email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="gn">Gender: </label>
+                </td>
+                <td>
+                    Male<input type="radio" name="gender" id="gn" value="male">
+                    Female<input type="radio" name="gender" id="gn" value="female">
+                    Other<input type="radio" name="gender" id="gn" value="other">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="courses">Courses: </label>
+                </td>
+                <td>
+                    Java Programming<input type="checkbox" name="java" id="courses" value="java">
+                    HTML CSS JS<input type="checkbox" name="web" id="courses" value="web">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button type="submit" onclick="validate()">Submit</button> <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function validate() {
+            var name = document.forms['myform']['nm'].value;
+            if (name == "")
+                alert("Name Can't Be Empty!");
+            var email = document.forms['myform']['em'].value;
+            if (email == "")
+                alert("Email Can't Be Empty!");
+            if (name != "" && email != "")
+                confirm(`Thanks For Registeration: Here are your details\n ${name}, ${email}`);
+            else
+                alert(`Registration Not Success!!`);
+       } 
+    </script>
+
+</body>
+
+</html>

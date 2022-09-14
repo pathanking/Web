@@ -1,0 +1,34 @@
+#p1{
+    border: 1px solid black;
+    color: darkorange;
+    background-color: aqua;
+}
+#p2{
+    border: 1px solid black;
+    color: darkgrey;
+    background-color: antiquewhite;
+}
+
+#p3{
+    border: 1px solid black;
+    color: darkblue;
+    background-color: azure;
+}
+
+#p4{
+    border: 1px solid black;
+    color:darkred;
+    background-color: beige;
+}
+
+.pp{
+    border: 1px dashed black;
+    color: darkcyan;
+    background-color: blanchedalmond;
+}
+
+h6{
+    border: 2px dashed black;
+    color: blue;
+    background-color: beige;
+}
